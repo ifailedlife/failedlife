@@ -52,13 +52,13 @@ export const userConfig: Partial<UserConfig> = {
     categoryMap: [{ name: '胡适', path: 'hu-shi' }],
     footer: [
       '© %year <a target="_blank" href="%website">%author</a>',
-      'Theme <a target="_blank" href="https://github.com/Moeyua/astro-theme-typography">Typography</a> by <a target="_blank" href="https://moeyua.com">Moeyua</a>',
-      'Proudly published with <a target="_blank" href="https://astro.build/">Astro</a>',
+      'Powered by <a target="_blank" href="https://astro.build/">Astro</a>',
+      '<a target="_blank" href="https://github.com/Moeyua/astro-theme-typography">Typography</a> theme by <a target="_blank" href="https://moeyua.com">Moeyua</a>',
     ],
   },
   appearance: {
     theme: 'dark',
-    locale: 'zh-cn',
+    locale: 'ko-kr',
     colorsLight: {
       primary: '#2e405b',
       background: '#ffffff',
@@ -74,7 +74,7 @@ export const userConfig: Partial<UserConfig> = {
     },
   },
   seo: {
-    twitter: '@moeyua13',
+    twitter: '@moeyua1',
     meta: [],
     link: [],
   },
@@ -85,7 +85,7 @@ export const userConfig: Partial<UserConfig> = {
     // disqus: { shortname: "typography-astro" },
   },
   analytics: {
-    googleAnalyticsId: '',
+    googleAnalyticsId: 'CCQZKGZXQZ',
     umamiAnalyticsId: '',
   },
   latex: {

@@ -1,4 +1,27 @@
 export const LANGUAGES = {
+  'ko-kr': {
+    Home: '첫 편지',
+    Posts: '편지',
+    Categories: '분류',
+    Archive: '모아보기',
+    Tags: '꼬리표',
+    About: '소개',
+    Links: '다른 글모음',
+
+    posted_at: '받은 시간',
+    tag_count: '꼬리표 %d개 ',
+    archive_count: '받은 편지 %d통',
+    categories_count: '따로 모은 편지 %d통',
+    page_count: '%d',
+    page_number: '%d',
+    all_posts: '모든 편지 읽기',
+    comments: '받은 메모',
+    share: '돌려보기',
+    prev: '다음 모음',
+    next: '이전 모음',
+    prev_post: '다음 편지',
+    next_post: '이전 편지',
+  },
   'zh-cn': {
     Home: '首页',
     Posts: '文章',

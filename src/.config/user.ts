@@ -85,7 +85,7 @@ export const userConfig: Partial<UserConfig> = {
     // disqus: { shortname: "typography-astro" },
   },
   analytics: {
-    googleAnalyticsId: 'CCQZKGZXQZ',
+    googleAnalyticsId: 'G-CCQZKGZXQZ',
     umamiAnalyticsId: '',
   },
   latex: {

@@ -27,6 +27,7 @@
     "astro-seo": "^0.8.4",
     "astro-theme-typography": "file:",
     "giscus": "^1.5.0",
+    "pnpm": "^9.13.2",
     "rehype-katex": "^7.0.1",
     "remark-math": "^6.0.0",
     "typescript": "~5.5.4",

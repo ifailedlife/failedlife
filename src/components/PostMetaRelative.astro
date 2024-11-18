@@ -1,0 +1,30 @@
+---
+import type { Post } from '~/types'
+import { formatDate, formatDateYear, formatDateYearDiff, formatDateInSeason } from '~/utils'
+import PostCategory from './PostCategory.astro'
+
+interface Props {
+  post: Post
+}
+
+const { post } = Astro.props
+const { translate: t } = Astro.locals
+
+const categoryList = post.data.categories ?? []
+---
+
+<div class="text-3.5">
+  <time
+    >{
+      formatDateYearDiff(post.data.pubDate) === 0
+        ? t('this_year')
+        : formatDateYearDiff(post.data.pubDate) === 1
+          ? t('last_year')
+          : formatDateYearDiff(post.data.pubDate) > 3
+            ? t('in', formatDateYear(post.data.pubDate))
+            : t('years_ago', formatDateYearDiff(post.data.pubDate))
+    }</time
+  >
+  <time>{t(formatDateInSeason(post.data.pubDate))}</time>
+  {categoryList.map((category) => <PostCategory category={category} />)}
+</div>

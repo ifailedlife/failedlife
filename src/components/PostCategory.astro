@@ -13,6 +13,5 @@ function getCategoryUrl(category: string) {
 }
 ---
 
-<a href={getCategoryUrl(category)}>
-  # {category}
-</a>
+<!-- failedlife > removed the '#' from the category name -->
+<a href={getCategoryUrl(category)}>{category}</a>

@@ -44,6 +44,46 @@ export function formatDate(date: Date, format: string = 'YYYY-MM-DD') {
   return dayjs(date).format(format)
 }
 
+// failedlife > get the year of post
+export function formatDateYear(date: Date, format: string = 'YYYY') {
+  return dayjs(date).format(format)
+}
+
+// failedlife > get the year diff of post from current year
+export function formatDateYearDiff(date: Date, format: string = 'YYYY-MM-DD') {
+  const today = dayjs()
+  const diff = today.diff(dayjs(date).format(format), 'year')
+  return diff
+}
+
+// failedlife added function to get the name of season from the date: Date
+export function formatDateInSeason(date: Date, format: string = 'M') {
+  let season = ''
+  switch (dayjs(date).format(format)) {
+    case '12':
+    case '1':
+    case '2':
+      season = 'winter'
+      break
+    case '3':
+    case '4':
+    case '5':
+    case '6':
+      season = 'spring'
+      break
+    case '7':
+    case '8':
+      season = 'summer'
+      break
+    case '9':
+    case '10':
+    case '11':
+      season = 'fall'
+      break
+  }
+  return season
+}
+
 export function getPathFromCategory(
   category: string,
   category_map: { name: string, path: string }[],

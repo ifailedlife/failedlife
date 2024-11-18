@@ -77,6 +77,7 @@ export interface ConfigLaTeX {
 
 interface Colors {
   primary: string
+  neutral: string
   background: string
 }
 

@@ -41,11 +41,12 @@ function getListItem(post: Post): ListItem {
           <h2 class="post-title">{year}</h2>
           <ul class="pl-6" flex="~ col gap-4">
             {posts.map(({ title, href, date }) => (
+              // 2024-11-18 failedlife > the post-title as an inline element, move <time> in front of the post-title
               <li>
-                <h3 class="post-title">
+                <time>{date}</time>
+                <h3 class="post-title inline">
                   <a href={href}>{title}</a>
                 </h3>
-                <time>{date}</time>
               </li>
             ))}
           </ul>

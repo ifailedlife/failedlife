@@ -1,5 +1,6 @@
 ---
 import PostMeta from '~/components/PostMeta.astro'
+import PostMetaRelative from '~/components/PostMetaRelative.astro'
 import type { Post } from '~/types'
 
 interface Props {
@@ -12,4 +13,5 @@ const { post } = Astro.props
 <article class="prose">
   <PostMeta post={post} />
   <slot />
+  <PostMetaRelative post={post} />
 </article>

@@ -28,6 +28,7 @@ export const LANGUAGES = {
     last_year: '작년',
     years_ago: '%d년 전',
     in: '%d년',
+    sent_to: '에게',
   },
   'en-us': {
     Home: 'Home',
@@ -51,6 +52,7 @@ export const LANGUAGES = {
     next: 'Next',
     prev_post: 'Previous post',
     next_post: 'Next post',
+    sent_to: '%d',
   },
   'zh-cn': {
     Home: '首页',

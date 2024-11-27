@@ -12,6 +12,6 @@ const { post } = Astro.props;
 
 <article class="prose text-4.5"> 
   <PostMeta post={post}/>
-  <div class="font-article break-keep"><slot /></div>
+  <div class="font-article break-keep mb-15"><slot /></div>
   <PostMetaRelative post={post} />
 </article>

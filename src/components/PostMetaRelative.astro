@@ -1,30 +1,38 @@
 ---
-import type { Post } from '~/types'
-import { formatDate, formatDateYear, formatDateYearDiff, formatDateInSeason } from '~/utils'
-import PostCategory from './PostCategory.astro'
+import type { Post } from "~/types";
+import {
+  formatDate,
+  formatDateYear,
+  formatDateYearDiff,
+  formatDateInSeason,
+} from "~/utils";
+import PostCategory from "./PostCategory.astro";
 
 interface Props {
-  post: Post
+  post: Post;
 }
 
-const { post } = Astro.props
-const { translate: t } = Astro.locals
+const { post } = Astro.props;
+const { translate: t } = Astro.locals;
 
-const categoryList = post.data.categories ?? []
+const categoryList = post.data.categories ?? [];
 ---
 
-<div class="text-3.5">
-  <time
-    >{
+<div class="text-4 not-prose font-article mb-7 mt-3.5">
+  <!-- Write Year Difference between pubDate and current year -->
+  <p>
+    {
       formatDateYearDiff(post.data.pubDate) === 0
-        ? t('this_year')
+        ? t("this_year")
         : formatDateYearDiff(post.data.pubDate) === 1
-          ? t('last_year')
+          ? t("last_year")
           : formatDateYearDiff(post.data.pubDate) > 3
-            ? t('in', formatDateYear(post.data.pubDate))
-            : t('years_ago', formatDateYearDiff(post.data.pubDate))
-    }</time
-  >
-  <time>{t(formatDateInSeason(post.data.pubDate))}</time>
-  {categoryList.map((category) => <PostCategory category={category} />)}
+            ? t("in", formatDateYear(post.data.pubDate))
+            : t("years_ago", formatDateYearDiff(post.data.pubDate))
+    }
+    {t(formatDateInSeason(post.data.pubDate))}, 
+    {categoryList.map((category) => <PostCategory category={category} />)}{
+      t("sent_to")
+    }
+  </p>
 </div>

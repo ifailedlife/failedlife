@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Create an Astro Component'
+title: '튜토리얼: Astro 컴포넌트 만들기'
 description: 'Learn how to create your first Astro component.'
 pubDate: 'Jul 02 2022'
 categories: ['Astro']

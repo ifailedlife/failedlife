@@ -83,9 +83,11 @@ interface Colors {
 
 interface Fonts {
   header: string
+  subheader: string
   ui: string
+  article: string
   // TODO: 未实现
-  _article?: string
+  // _article?: string
   _code?: string
 }
 

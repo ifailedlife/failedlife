@@ -14,12 +14,7 @@ const categoryList = post.data.categories ?? []
 ---
 
 <div flex="~ col gap-2">
-  <h1 class="post-title">
+  <h1 class="post-title font-header font-bold text-5">
     <a class="not-prose" href={`/posts/${post.slug}/`}>{post.data.title}</a>
   </h1>
-  <!-- <div class="text-3.5 hidden">
-    <span>{t('posted_at')}</span>
-    <time>{formatDate(post.data.pubDate)}</time>
-    {categoryList.map((category) => <PostCategory category={category} />)}
-  </div> -->
 </div>

@@ -60,10 +60,13 @@ export const defaultConfig: ThemeConfig = {
     colorsLight: {
       primary: '#2e405b',
       background: '#ffffff',
+      dot: '',
+      zen: '#000000',
     },
     colorsDark: {
       primary: '#FFFFFF',
       background: '#232222',
+      dot: '',
     },
     fonts: {
       header:

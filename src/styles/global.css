@@ -2,80 +2,75 @@
 https://github.com/moeyua/astro-theme-typography/blob/main/src/styles/global.css */
 
 /* Noto Sans KR */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
 
 @font-face {
-    font-family: "GyeonggiBatang Bold";
-    src: url("/fonts/GyeonggiBatang_Bold.woff")
-        format("woff");
-    font-weight: bold;
-    font-style: normal;
+	font-family: "GyeonggiBatang Bold";
+	src: url("/fonts/GyeonggiBatang_Bold.woff") format("woff");
+	font-weight: bold;
+	font-style: normal;
 }
 
 @font-face {
-    font-family: "GyeonggiBatang";
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2410-3@1.0/Batang_Regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
+	font-family: "GyeonggiBatang";
+	src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2410-3@1.0/Batang_Regular.woff")
+		format("woff");
+	font-weight: 400;
+	font-style: normal;
 }
 
 /* KingSejongInstitute */
 @font-face {
-    font-family: "KingSejongInstitute Regular";
-    src: url("/fonts/KingSejongInstitute_Regular.woff2")
-        format("woff2");
-    font-weight: normal;
-    font-style: normal;
+	font-family: "KingSejongInstitute Regular";
+	src: url("/fonts/KingSejongInstitute_Regular.woff2") format("woff2");
+	font-weight: normal;
+	font-style: normal;
 }
 
 @font-face {
-    font-family: "KingSejongInstitute Bold";
-    src: url("/fonts/KingSejongInstitute_Bold.woff2")
-        format("woff2");
-    font-weight: bold;
-    font-style: normal;
+	font-family: "KingSejongInstitute Bold";
+	src: url("/fonts/KingSejongInstitute_Bold.woff2") format("woff2");
+	font-weight: bold;
+	font-style: normal;
 }
 
 /* import Jaemin for Chinese letters in page article */
 @font-face {
-    font-family: "Hangeuljaemin4-Regular";
-    src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/Hangeuljaemin4-Regular.woff2")
-        format("woff2");
-    font-weight: normal;
-    font-style: normal;
+	font-family: "Hangeuljaemin4-Regular";
+	src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/Hangeuljaemin4-Regular.woff2")
+		format("woff2");
+	font-weight: normal;
+	font-style: normal;
 }
 
 :root {
-    /* biome-ignore lint/correctness/noUnknownFunction: <explanation> */
-    --uno-colors-primary: theme("colors.primary");
-    /* biome-ignore lint/correctness/noUnknownFunction: <explanation> */
-    --uno-colors-background: theme("colors.background");
-    --uno-colors-neutral: theme("colors.neutral");
-    --uno-colors-shadow: theme("colors.shadow");
-    --uno-fonts-ui: theme("fontFamily.ui");
-    --uno-fonts-article: theme("fontFamily.article");
+	--uno-colors-primary: theme("colors.primary");
+	--uno-colors-background: theme("colors.background");
+	--uno-colors-shadow: theme("colors.shadow");
+
+	--uno-colors-dot: theme("colors.dot");
+	--uno-colors-zen: theme("colors.zen");
+
+	--uno-fonts-ui: theme("fontFamily.ui");
+	--uno-fonts-article: theme("fontFamily.article");
 }
 
 html {
-    --at-apply: antialiased;
-    --at-apply: "bg-background c-primary font-ui text-shadow-color-shadow";
-
-    /* drawing page background */
-    background-image: radial-gradient(
-        circle,
-        --uno-colors-neutral 2px,
-        --uno-colors-primary 2px
-    );
-    /* Adjust the size to make the grid denser or sparser */
+	--at-apply: antialiased;
+	--at-apply: "bg-background c-primary font-ui";
+	/* background-image: radial-gradient(#dcd2cd 2px, transparent 0px); */
+	background-image: radial-gradient(var(--uno-colors-zen) 2px, transparent 0px);
+    /* background-image: linear-gradient(
+			90deg,
+			var(--uno-colors-dot) 1px,
+			transparent 1px
+		), linear-gradient(180deg, var(--uno-colors-dot) 1px, transparent 1px); */
+	background-size: 2.5em 2.5em; /* Size of each dot */
 }
 
 :where(a):not(.not-underline-hover) {
-    --at-apply: "p-0.5px pb-2px pt-0px";
-    --at-apply: "decoration-underline decoration-0.1em decoration-offset-2px align-baseline";
-    --at-apply: "ease-in-out duration-300ms";
-    --at-apply: "hover:(c-background bg-primary decoration-primary)";
-}
-
-.prose {
-    /* font-size: 1.1em; */
+	--at-apply: "p-0.5px pb-2px pt-0px";
+	--at-apply: "decoration-underline decoration-0.1em decoration-offset-2px align-baseline";
+	--at-apply: "ease-in-out duration-300ms";
+	--at-apply: "hover:(c-background bg-primary decoration-primary)";
 }

@@ -59,14 +59,16 @@ export const userConfig: Partial<UserConfig> = {
     theme: 'light',
     locale: 'ko-kr',
     colorsLight: {
-      primary: '#6C3C3C',
-      neutral: '#c3bdac',
+      primary: '#381f20',
       background: '#f0ece4',
+      dot: "#dcd2cd",
+      zen: "#dcd2cd",
     },
     colorsDark: {
       primary: '#FFFFFF',
-      neutral: '#232222',
       background: '#232222',
+      dot: '#ffffff',
+      zen: '#ffffff',
     },
     fonts: {
       header:

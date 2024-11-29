@@ -21,26 +21,41 @@ function getListItems(posts: Post[]) {
   const result = posts.map((post) => ({
     title: post.data.title,
     href: `/posts/${post.slug}/`,
-    date: formatDate(post.data.pubDate),
+
+    date: formatDate(post.data.pubDate, "MM-DD"),
+    year: formatDate(post.data.pubDate, "YYYY"),
+    month: formatDate(post.data.pubDate, "M"),
+    day: formatDate(post.data.pubDate, "D"),
+
   }))
   return result
 }
+
+const { translate: t } = Astro.locals;
+
 ---
 
 <LayoutDefault>
+  <div class="prose" flex="~ col">
+    <h2 class="postTitle">{name}</h2>
+
   <section>
-    <h2 class="post-title"># {name}</h2>
-    <ul class="pl-6 py-3" flex="~ col gap-4">
+    <ul class="pl-6 list-none m-0" flex="~ col">
       {
-        getListItems(posts).map(({ title, href, date }) => (
-          <li>
-            <h3 class="post-title">
-              <a href={href}>{title}</a>
-            </h3>
-            <time>{date}</time>
-          </li>
-        ))
-      }
-    </ul>
-  </section>
+        getListItems(posts).map(({ title, href, year, month, day }) => (
+          
+        <li class="font-article">
+                <time class="text-3.5">
+                  {t('in', (year))}
+
+                  {t('month', (month))}
+                  {t('day', (day))}
+                  </time>
+                <span class="post-title-list pl-1.75 text-4"><a href={href}>{title}</a></span>
+              </li>
+            ))}
+
+          </ul>
+        </section>
+  </div>
 </LayoutDefault>

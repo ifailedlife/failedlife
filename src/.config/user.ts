@@ -50,9 +50,7 @@ export const userConfig: Partial<UserConfig> = {
     ],
     categoryMap: [{ name: '친구들', path: 'friends' }],
     footer: [
-      '© %year <a target="_blank" href="%website">%author</a>',
-      'Powered by <a target="_blank" href="https://astro.build/">Astro</a>',
-      '<a target="_blank" href="https://github.com/Moeyua/astro-theme-typography">Typography</a> theme by <a target="_blank" href="https://moeyua.com">Moeyua</a>',
+      '© %year <a target="_blank" href="%website">failed.life</a>',
     ],
   },
   appearance: {
@@ -61,8 +59,8 @@ export const userConfig: Partial<UserConfig> = {
     colorsLight: {
       primary: '#381f20',
       background: '#f0ece4',
-      dot: "#dcd2cd",
-      zen: "#dcd2cd",
+      dot: "#000000",
+      ink: "#0B0737",
     },
     colorsDark: {
       primary: '#FFFFFF',

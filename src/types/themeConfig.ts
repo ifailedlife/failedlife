@@ -78,8 +78,8 @@ export interface ConfigLaTeX {
 interface Colors {
   primary: string
   dot: string
+  ink: string
   background: string
-  zen: string
 }
 
 interface Fonts {

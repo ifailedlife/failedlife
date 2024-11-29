@@ -62,14 +62,20 @@ export function formatDateInSeason(date: Date, format: string = 'M') {
   switch (dayjs(date).format(format)) {
     case '12':
     case '1':
-    case '2':
       season = 'winter'
       break
+    case '2':
+      season = 'late_winter'
+      break
     case '3':
+      season = 'early_spring'
+      break
     case '4':
     case '5':
-    case '6':
       season = 'spring'
+      break
+    case '6':
+      season = 'late_spring'
       break
     case '7':
     case '8':
@@ -77,8 +83,10 @@ export function formatDateInSeason(date: Date, format: string = 'M') {
       break
     case '9':
     case '10':
-    case '11':
       season = 'fall'
+      break
+    case '11':
+      season = 'early_winter'
       break
   }
   return season

@@ -1,20 +1,20 @@
 ---
-import type { Post } from '~/types'
-import { formatDate } from '~/utils'
-import PostCategory from './PostCategory.astro'
+import type { Post } from "~/types";
+import { formatDate } from "~/utils";
+import PostCategory from "./PostCategory.astro";
 
 interface Props {
-  post: Post
+  post: Post;
 }
 
-const { post } = Astro.props
-const { translate: t } = Astro.locals
+const { post } = Astro.props;
+const { translate: t } = Astro.locals;
 
-const categoryList = post.data.categories ?? []
+// const categoryList = post.data.categories ?? []
 ---
 
 <div flex="~ col gap-2">
-  <h1 class="post-title font-header font-bold text-5">
+  <h2 class="post-title-list font-bold font-header">
     <a class="not-prose" href={`/posts/${post.slug}/`}>{post.data.title}</a>
-  </h1>
+  </h2>
 </div>

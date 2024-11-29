@@ -1,5 +1,5 @@
 ---
-import PostMeta from "~/components/PostMeta.astro";
+// import PostMeta from "~/components/PostMeta.astro";
 import PostMetaRelative from "~/components/PostMetaRelative.astro";
 import type { Post } from "~/types";
 
@@ -10,8 +10,13 @@ interface Props {
 const { post } = Astro.props;
 ---
 
-<article class="prose text-4.5"> 
-  <PostMeta post={post}/>
+<article class="prose text">
+  <!-- <PostMeta post={post} /> -->
+
+  <div flex="~ col gap-2">
+    <h2 class="postTitle">{post.data.title}</h2>
+  </div>
+
   <div class="font-article break-keep mb-15"><slot /></div>
   <PostMetaRelative post={post} />
 </article>

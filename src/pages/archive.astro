@@ -1,52 +1,61 @@
 ---
-import LayoutDefault from '~/layouts/LayoutDefault.astro'
-import type { Post } from '~/types'
-import { formatDate, getPosts } from '~/utils'
+import LayoutDefault from "~/layouts/LayoutDefault.astro";
+import type { Post } from "~/types";
+import { formatDate, getPosts } from "~/utils";
 
-const posts = await getPosts()
+const posts = await getPosts();
 
-const yearMap = getYearMap(posts)
+const yearMap = getYearMap(posts);
 
 interface ListItem {
-  title: string
-  href: string
-  date: string
+  title: string;
+  href: string;
+  date: string;
+  month: string;
+  day: string;
 }
 
 function getYearMap(posts: Post[]) {
-  const result = new Map<number, ListItem[]>()
+  const result = new Map<number, ListItem[]>();
   for (const post of posts) {
-    const year = (post.data.pubDate ?? new Date()).getFullYear()
-    const posts = result.get(year) ?? []
-    posts.push(getListItem(post))
-    result.set(year, posts)
+    const year = (post.data.pubDate ?? new Date()).getFullYear();
+    const posts = result.get(year) ?? [];
+    posts.push(getListItem(post));
+    result.set(year, posts);
   }
-  return Array.from(result.entries())
+  return Array.from(result.entries());
 }
 
 function getListItem(post: Post): ListItem {
   return {
     title: post.data.title,
     href: `/posts/${post.slug}/`,
-    date: formatDate(post.data.pubDate, 'MM-DD'),
-  }
+    date: formatDate(post.data.pubDate, "MM-DD"),
+    month: formatDate(post.data.pubDate, "M"),
+    day: formatDate(post.data.pubDate, "D"),
+  };
 }
+
+const { translate: t } = Astro.locals;
+
 ---
 
 <LayoutDefault>
-  <div flex="~ col gap-4">
+  <div class="prose" flex="~ col">
+    <h2 class="postTitle">{t('Archive')}</h2>
     {
       yearMap.map(([year, posts]) => (
         <section>
-          <h2 class="post-title">{year}</h2>
-          <ul class="pl-6" flex="~ col gap-4">
-            {posts.map(({ title, href, date }) => (
-              // 2024-11-18 failedlife > the post-title as an inline element, move <time> in front of the post-title
-              <li>
-                <time>{date}</time>
-                <h3 class="post-title inline">
-                  <a href={href}>{title}</a>
-                </h3>
+          <h3 class="font-article">{t("in", year)}</h3>
+          <ul class="pl-6 list-none m-0" flex="~ col">
+            {posts.map(({ title, href, month, day }) => (
+
+                <li class="font-article">
+                <time class="text-3.5">
+                  {t('month', (month))}
+                  {t('day', (day))}
+                  </time>
+                <span class="post-title-list pl-1.75 text-4"><a href={href}>{title}</a></span>
               </li>
             ))}
           </ul>

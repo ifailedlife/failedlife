@@ -1,7 +1,7 @@
 ---
 title: '튜토리얼: Astro 컴포넌트 만들기'
 description: 'Learn how to create your first Astro component.'
-pubDate: 'Jul 02 2022'
+pubDate: 2022-07-22
 categories: ['Astro']
 ---
 
@@ -9,7 +9,7 @@ categories: ['Astro']
 
 Astro component syntax is a superset of HTML. The syntax was [designed to feel familiar to anyone with experience writing HTML or JSX](#differences-between-astro-and-jsx), and adds support for including components and JavaScript expressions.
 
-## JSX-like Expressions
+### JSX-like Expressions
 
 You can define local JavaScript variables inside of the frontmatter component script between the two code fences (`---`) of an Astro component. You can then inject these variables into the component's HTML template using JSX-like expressions!
 

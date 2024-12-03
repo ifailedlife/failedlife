@@ -17,10 +17,10 @@ export const userConfig: Partial<UserConfig> = {
         name: 'rss',
         href: '/atom.xml',
       },
-      // {
-      //   name: 'github',
-      //   href: 'https://github.com/moeyua/astro-theme-typography',
-      // },
+      {
+        name: 'github',
+        href: 'https://github.com/ifailedlife/failedlife',
+      },
       // {
       //   name: 'twitter',
       //   href: 'https://github.com/moeyua/astro-theme-typography',

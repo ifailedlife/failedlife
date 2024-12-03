@@ -52,7 +52,7 @@ https://github.com/moeyua/astro-theme-typography/blob/main/src/styles/global.css
 	--uno-colors-ink: theme("colors.ink");
 
 	--uno-fonts-ui: theme("fontFamily.ui");
-	--uno-fonts-header: theme("fontFamily.subheader");
+	--uno-fonts-subheader: theme("fontFamily.subheader");
 
 	--uno-fonts-article: theme("fontFamily.article");
 }
@@ -82,7 +82,7 @@ html {
 
 .prose {
 	word-break: keep-all;
-	font-size:1.05rem;
+	font-size:1.125rem;
 	font-family: var(--uno-fonts-article);
 }
 .prose p {
@@ -92,11 +92,12 @@ html {
 }
 
 .prose h2 {
-	font-weight: normal;
-	/* color: var(--uno-colors-ink) !important; */
-
+	font-size: 1.65rem;
 }
-
+.prose h3 {
+	font-size: 1.45rem;
+}
+.prose h2,
 .prose h3,
 .prose h4,
 .prose h5,
@@ -105,7 +106,7 @@ html {
 	font-weight: normal !important;
 	margin-top: 1.5rlh;
 	/* margin-bottom: 0.6rlh; */
-	font-family: var(--uno-fonts-header);
+	font-family: var(--uno-fonts-subheader);
 	/* color: var(--uno-colors-ink) !important; */
 	/* margin-inline-start: 1rem; */
 }

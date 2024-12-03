@@ -42,7 +42,7 @@ const { translate: t } = Astro.locals;
 
 <LayoutDefault>
   <div class="prose" flex="~ col">
-    <h2 class="postTitle">{t('Archive')}</h2>
+    <h2 class="post-title-prose">{t('Archive')}</h2>
     {
       yearMap.map(([year, posts]) => (
         <section>

@@ -22,6 +22,10 @@ export const userConfig: Partial<UserConfig> = {
         href: 'https://github.com/ifailedlife/failedlife',
       },
       // {
+      //   name: 'github',
+      //   href: 'https://github.com/moeyua/astro-theme-typography',
+      // },
+      // {
       //   name: 'twitter',
       //   href: 'https://github.com/moeyua/astro-theme-typography',
       // },

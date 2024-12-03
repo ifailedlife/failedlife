@@ -38,6 +38,7 @@ function getListItem(post: Post): ListItem {
     {
       yearMap.map(([year, posts]) => (
         <section>
+<<<<<<< HEAD
           <h2 class="post-title-prose">{year}</h2>
           <ul class="pl-6" flex="~ col gap-4">
             {posts.map(({ title, href, date }) => (
@@ -45,6 +46,15 @@ function getListItem(post: Post): ListItem {
               <li>
                 <time>{date}</time>
                 <h3 class="post-title-prose inline">
+=======
+          <h2 class="post-title">{year}</h2>
+          <ul class="pl-6" flex="~ col gap-4">
+            {posts.map(({ title, href, date }) => (
+              // 2024-11-18 failedlife > the post-title as an inline element, move <time> in front of the post-title
+              <li>
+                <time>{date}</time>
+                <h3 class="post-title inline">
+>>>>>>> d668ecfafa42f2e3260373bf7dbc8f2c1de713f3
                   <a href={href}>{title}</a>
                 </h3>
               </li>

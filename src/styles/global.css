@@ -52,11 +52,7 @@ https://github.com/moeyua/astro-theme-typography/blob/main/src/styles/global.css
 	--uno-colors-ink: theme("colors.ink");
 
 	--uno-fonts-ui: theme("fontFamily.ui");
-<<<<<<< HEAD
 	--uno-fonts-subheader: theme("fontFamily.subheader");
-=======
-	--uno-fonts-header: theme("fontFamily.subheader");
->>>>>>> d668ecfafa42f2e3260373bf7dbc8f2c1de713f3
 
 	--uno-fonts-article: theme("fontFamily.article");
 }
@@ -86,11 +82,7 @@ html {
 
 .prose {
 	word-break: keep-all;
-<<<<<<< HEAD
 	font-size:1.125rem;
-=======
-	font-size:1.05rem;
->>>>>>> d668ecfafa42f2e3260373bf7dbc8f2c1de713f3
 	font-family: var(--uno-fonts-article);
 }
 .prose p {
@@ -100,20 +92,12 @@ html {
 }
 
 .prose h2 {
-<<<<<<< HEAD
 	font-size: 1.65rem;
 }
 .prose h3 {
 	font-size: 1.45rem;
 }
 .prose h2,
-=======
-	font-weight: normal;
-	/* color: var(--uno-colors-ink) !important; */
-
-}
-
->>>>>>> d668ecfafa42f2e3260373bf7dbc8f2c1de713f3
 .prose h3,
 .prose h4,
 .prose h5,
@@ -122,11 +106,7 @@ html {
 	font-weight: normal !important;
 	margin-top: 1.5rlh;
 	/* margin-bottom: 0.6rlh; */
-<<<<<<< HEAD
 	font-family: var(--uno-fonts-subheader);
-=======
-	font-family: var(--uno-fonts-header);
->>>>>>> d668ecfafa42f2e3260373bf7dbc8f2c1de713f3
 	/* color: var(--uno-colors-ink) !important; */
 	/* margin-inline-start: 1rem; */
 }
